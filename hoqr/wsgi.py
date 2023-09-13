@@ -1,5 +1,5 @@
 """
-WSGI config for HOQR project.
+WSGI config for hoqr project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'HOQR.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hoqr.settings')
 
 application = get_wsgi_application()

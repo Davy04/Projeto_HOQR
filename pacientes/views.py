@@ -1,5 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
-def clientes (request):
-    return HttpResponse('Estou em /pacientes/')
+def pacientes (request):
+    return render(request, 'pacientes.html')

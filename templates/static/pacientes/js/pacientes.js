@@ -1,7 +1,7 @@
 function add_remedio(){
-    container = document.getElementById('form-carro')
+    container = document.getElementById('form-remedio')
 
-    html = "<br>  <div class='row'> <div class='col-md'> <input type='text' placeholder='carro' class='form-control' name='carro' > </div> <div class='col-md'><input type='text' placeholder='Placa' class='form-control' name='placa' ></div> <div class='col-md'> <input type='text' placeholder='ano' class='form-control' name='ano'> </div> </div>"
+    html = "<br>  <div class='row'> <div class='col-md'> <input type='text' placeholder='remedio' class='form-control' name='remedio' > </div> <div class='col-md'><input type='text' placeholder='quantidade' class='form-control' name='quantidade' ></div> <div class='col-md'> <input type='text' placeholder='duração' class='form-control' name='duracao'> </div> </div>"
 
     container.innerHTML += html
 }
@@ -58,26 +58,26 @@ function dados_paciente(){
         email = document.getElementById('email')
         email.value = data['paciente']['email']
 
-        div_carros = document.getElementById('carros')
+        div_remedios = document.getElementById('remedios')
 
-        for(i=0; i<data['carros'].length; i++){
-            div_carros.innerHTML += "\<form action='/pacientes/update_carro/" + data['carros'][i]['id'] +"' method='POST'>\
+        for(i=0; i<data['remedios'].length; i++){
+            div_remedios.innerHTML += "\<form action='/pacientes/update_remedio/" + data['remedios'][i]['id'] +"' method='POST'>\
                 <div class='row'>\
                         <div class='col-md'>\
-                            <input class='form-control' name='carro' type='text' value='" + data['carros'][i]['fields']['carro'] + "'>\
+                            <input class='form-control' name='remedio' type='text' value='" + data['remedios'][i]['fields']['remedio'] + "'>\
                         </div>\
                         <div class='col-md'>\
-                            <input class='form-control' name='placa' type='text' value='" + data['carros'][i]['fields']['placa'] + "'>\
+                            <input class='form-control' name='quantidade' type='text' value='" + data['remedios'][i]['fields']['quantidade'] + "'>\
                         </div>\
                         <div class='col-md'>\
-                            <input class='form-control' type='text' name='ano' value='" + data['carros'][i]['fields']['ano'] + "' >\
+                            <input class='form-control' type='text' name='duracao' value='" + data['remedios'][i]['fields']['duracao'] + "' >\
                         </div>\
                         <div class='col-md'>\
                             <input class='btn btn-lg btn-success' type='submit'>\
                         </div>\
                     </form>\
                     <div class='col-md'>\
-                        <a href='/pacientes/excluir_carro/"+ data['carros'][i]['id'] +"' class='btn btn-lg btn-danger'>EXCLUIR</a>\
+                        <a href='/pacientes/excluir_remedio/"+ data['remedios'][i]['id'] +"' class='btn btn-lg btn-danger'>EXCLUIR</a>\
                     </div>\
                 </div><br>"
         }

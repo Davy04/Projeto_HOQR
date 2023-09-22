@@ -5,7 +5,8 @@ import re
 # Create your views here.
 def pacientes (request):
     if request.method == 'GET':
-        return render(request, 'pacientes.html')
+        pacientes_list = Paciente.objects.all()
+        return render(request, 'pacientes.html', {'pacientes': pacientes_list })
     elif request.method == 'POST':
         nome = request.POST.get('nome')
         sobrenome = request.POST.get('sobrenome')

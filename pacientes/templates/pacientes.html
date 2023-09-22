@@ -61,7 +61,7 @@
         <span class="btn-add-remedio" onclick="add_remedio()"
           >+ Adicionar um remedio</span
         >
-        #TODO: remover remedios 
+        #TODO: remover remedios
         <div id="form-remedio">
           {% for remedio, quantidade, duracao in remedios%}
           <br />
@@ -107,35 +107,10 @@
 
   <div id="att_paciente">
     <p></p>
-    <select id="paciente-select" onchange="dados_paciente()" class="form-control">
-      {% for paciente in pacientes %}
-      <option value="{{paciente.id}}">{{paciente.nome}}</option>
-      {% endfor %}
+    {{pacientes}}
+    <select>
+      <option></option>
     </select>
-    <br />
-    <hr />
-
-    <div id="form-att-paciente">
-      <input type="hidden" id="id" />
-      <p>Nome:</p>
-      <input id="nome" type="text" class="form-control" />
-      <p>Sobrenome:</p>
-      <input id="sobrenome" type="text" class="form-control" />
-      <p>E-mail:</p>
-      <input id="email" type="text" class="form-control" />
-      <p>CPF:</p>
-      <input id="cpf" type="text" class="form-control" />
-      <br />
-      <input
-        onclick="update_paciente()"
-        type="submit"
-        value="salvar"
-        class="btn btn-success"
-      />
-      <hr style="background-color: gray" />
-      <h2>Carros</h2>
-      <div id="remedios"></div>
-    </div>
   </div>
 </div>
 <script src="{% static 'pacientes/js/pacientes.js' %}"></script>

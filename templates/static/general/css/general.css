@@ -1,9 +1,9 @@
 :root{
      
-    --main-color: #ac4147;
-    --dark-color: #411f2d;
-    --light-color: #ffc27f;
-    --contrast-color: #f88863;
-    --differential-color: #ffe29a;
+    --main-color: #00dec2;
+    --dark-color: #00dec2;
+    --light-color: white;
+    --contrast-color: black;
+    --differential-color: #00dec2;
 
 }

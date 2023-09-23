@@ -30,7 +30,7 @@
   transition: all 0.5s ease;
 }
 .sidebar .logo-details .logo_name{
-  color: #fff;
+  color: black;
   font-size: 20px;
   font-weight: 600;
   opacity: 0;

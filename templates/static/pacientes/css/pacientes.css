@@ -11,14 +11,14 @@
 }
 
 .text-card{
-
+    color: black;
     font-size: 25px;
 
 }
 
 .btn-add-remedio{
 
-    background-color: var(--contrast-color);
+    background-color: white;
     padding: 5px;
     font-weight: bold;
     cursor: pointer;

@@ -107,9 +107,11 @@
 
   <div id="att_paciente">
     <p></p>
-    {{pacientes}}
-    <select>
-      <option></option>
+    
+    <select id="paciente-select" onchange="dados_paciente()" class="form-control">
+      {% for paciente in pacientes %}
+      <option value="{{paciente.id}}">{{paciente.nome}}</option>
+      {% endfor %}
     </select>
   </div>
 </div>

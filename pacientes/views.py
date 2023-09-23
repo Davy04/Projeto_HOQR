@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import Paciente, Remedio
 import re
 # Create your views here.
@@ -36,4 +36,6 @@ def pacientes (request):
             pac = Remedio(remedio=remedio, quantidade=quantidade, duracao=duracao, paciente=paciente)
             pac.save()
 
-        return HttpResponse('teste')
+def att_paciente(request):
+    print('teste')
+    return JsonResponse({"teste": 1})

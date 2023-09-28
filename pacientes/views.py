@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from .models import Paciente, Remedio
 import re
+from django.core import serializers
+import json
 # Create your views here.
 def pacientes (request):
     if request.method == 'GET':
@@ -36,6 +38,12 @@ def pacientes (request):
             pac = Remedio(remedio=remedio, quantidade=quantidade, duracao=duracao, paciente=paciente)
             pac.save()
 
+        return HttpResponse('teste')   
+
 def att_paciente(request):
-    print('teste')
-    return JsonResponse({"teste": 1})
+    id_paciente = request.POST.get('id_paciente') 
+    paciente = Paciente.objects.filter(id=id_paciente)
+    paciente_json = json.loads( serializers.serialize('json', paciente))[0]['fields']
+    print(paciente_json)
+    return JsonResponse(paciente_json)
+    

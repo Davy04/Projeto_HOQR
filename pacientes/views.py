@@ -42,8 +42,12 @@ def pacientes (request):
 
 def att_paciente(request):
     id_paciente = request.POST.get('id_paciente') 
+
     paciente = Paciente.objects.filter(id=id_paciente)
+    remedios = Remedio.objects.filter(paciente=paciente[0])
+
     paciente_json = json.loads( serializers.serialize('json', paciente))[0]['fields']
-    print(paciente_json)
+    remedios_json = json.loads( serializers.serialize('json', remedios))
+    remedios_json = [{'fields': remedio['fields'], 'id': remedio['pk']} for remedio in remedios_json]
+    print(remedios_json)
     return JsonResponse(paciente_json)
-    

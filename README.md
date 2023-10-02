@@ -6,7 +6,7 @@ O **HQOR** é um sistema de gerenciamento hospitalar projetado para simplificar 
 
 - **Cadastro de Pacientes**: Registre informações essenciais de pacientes, como nome, idade e medicamentos receitados.
 
-- **Registro Médico Eletrônico**: Mantenha um registro digital de consultas, exames, diagnósticos e tratamentos para melhor acompanhamento dos pacientes.
+- **Registro Médico Eletrônico**: Mantenha um registro digital para melhor acompanhamento dos pacientes.
 
 - **Relatórios Simples**: Gere relatórios básicos de atividades do hospital para análise e acompanhamento.
 

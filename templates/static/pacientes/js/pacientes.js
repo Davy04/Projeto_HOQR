@@ -82,7 +82,7 @@ function update_paciente(){
     }).then(function(result){
         return result.json()
     }).then(function(data){
-
+        
         if(data['status'] == '200'){
             nome = data['nome']
             sobrenome = data['sobrenome']
@@ -92,7 +92,6 @@ function update_paciente(){
         }else{
             console.log('Ocorreu algum erro')
         }
-
     })
 
 }
